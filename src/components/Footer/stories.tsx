@@ -3,7 +3,10 @@ import Footer from '.'
 
 export default {
   title: 'Footer',
-  component: Footer
+  component: Footer,
+  backgrounds: {
+    default: 'won-light'
+  }
 } as Meta
 
 export const Default: Story = () => (
