@@ -10,28 +10,24 @@ import Home from '.'
 
 const props = {
   banners: bannersMock,
-  newGames: gamesMock,
+  newGames: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: gamesMock,
-  upcommingGames: gamesMock,
-  upcommingHighlight: highlightMock,
-  upcommingMoreGames: gamesMock,
-  freeGames: gamesMock,
-  freeHighlight: highlightMock
+  mostPopularGames: [gamesMock[0]],
+  upcommingGames: [gamesMock[0]],
+  upcommingHighligth: highlightMock,
+  upcommingMoreGames: [gamesMock[0]],
+  freeGames: [gamesMock[0]],
+  freeHighligth: highlightMock
 }
 
 describe('<Home />', () => {
-  it('should render menu and fotter', () => {
+  it('should render Home correctly', () => {
     renderWithTheme(<Home {...props} />)
 
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: /contact us/i })
     ).toBeInTheDocument()
-  })
-
-  it('should render the sections', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
     expect(
