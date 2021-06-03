@@ -58,4 +58,10 @@ describe('<Logo />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render the with id is passed', () => {
+    const { container } = renderWithTheme(<Logo id="myId" />)
+
+    expect(container.querySelector('#paint_linear_myId')).toBeInTheDocument()
+  })
 })
