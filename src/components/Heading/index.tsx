@@ -8,7 +8,7 @@ export type Headingprops = {
   lineLeft?: boolean
   lineBottom?: boolean
   lineColor?: 'primary' | 'secondary' //Todo: Se utiliza o type LineColors, quebra no Storybook
-  size?: 'small' | 'medium'
+  size?: 'small' | 'medium' | 'huge'
 }
 
 const Heading = ({
